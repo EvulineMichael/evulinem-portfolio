@@ -1,0 +1,836 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@300;600&display=swap');
+html,
+body {
+  height: 100%;
+  }
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  padding-top: 60px; /* Add padding to body to prevent content from hiding behind the navbar */
+}
+
+
+
+body.light-mode {
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+body.dark-mode {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+body.dark-mode main h1, h2, h3, h4, h5, h6 {
+  color: inherit; /* Text color will adapt based on mode */
+}
+
+
+body.dark-mode main p {
+  color: inherit; /* Text color will adapt based on mode */
+}
+body.dark-mode .about-me p {
+  color: #000000;
+}
+body.dark-mode .my-services p {
+  color: #000000;
+}
+body.dark-mode .process p {
+  color: #000000;
+}
+body.dark-mode .process h2 {
+  color:#ffffff;
+}
+body.dark-mode .contact ul a {
+  color: #ffffff;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #444;
+}
+main {
+  text-align: center;
+  padding: 5vmin;
+  flex: 1 0 auto;
+  margin-top: 10px;
+}
+main h1 {
+  font-family: 'Roboto', sans-serif; /* Main font for readability */
+  font-size: 2.5rem; /* Font size for h1 */
+  font-weight: 600; /* Bold weight */
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #444;
+}
+main h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+main p {
+  color: grey;
+  font-family: 'Roboto', sans-serif; /* Main font for readability */
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+
+/* Container Styling */
+.intro-statement {
+  display: flex;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #fcb69f);
+  background-size: 300% 300%;
+  min-height: 90vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  flex-direction: column;
+  animation: backgroundColorChange 10s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fade-In and Scale-Up Effect for Text */
+.intro-statement h1 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 3rem;
+  color: #333;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeInScale 3s ease forwards;
+}
+
+/* Catchphrase Styling */
+.catchphrase {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  color: #555;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 2s ease forwards;
+  animation-delay: 3s; /* Delay to start after the intro statement */
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Slide-Up with Fade-In Keyframes for Catchphrase */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* General Button Styling */
+.btn-get-in-touch {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-light);
+  background-color: #ff6f61; /* Sleeker color */
+  border: 2px solid transparent;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 2s ease forwards;
+  animation-delay: 4.0s; /* Appear after the catchphrase */
+}
+
+body.dark-mode .btn-get-in-touch {
+  color: var(--text-dark);
+  background-color: #ff6f61; /* Same color for dark mode */
+}
+
+/* Hover Effect */
+.btn-get-in-touch:hover {
+  background-color: transparent;
+  color: #ff6f61;
+  border-color: #ff6f61;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+  .btn-get-in-touch {
+    padding: 15px;
+    font-size: 18px;
+  }
+}
+
+/* Slide-Up with Fade-In Keyframes for Button */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+/* Fade-In and Scale-Up Keyframes */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Warm Color Background Animation */
+@keyframes backgroundColorChange {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* Scroll Up Animation for Text Content */
+@keyframes scrollUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply Scroll-Up Animation when Visible */
+.text-content.visible {
+  opacity: 0;
+  transform: translateY(100%);
+  animation: scrollUp 1s ease forwards;
+}
+/* Intro Content Container */
+.intro-content {
+  display: flex;
+  flex-direction: row; /* Side-by-side layout */
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  gap: 20px;
+}
+
+/* Image Styling */
+.portfolio-image {
+  width: 300px; /* Adjust as needed */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Content Styling */
+.text-content {
+  max-width: 600px; /* Limits the width of the text content */
+}
+
+.text-content p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+  .intro-content {
+    flex-direction: column; /* Stack vertically on small screens */
+    text-align: center; /* Center-align text content */
+  }
+
+  .portfolio-image {
+    width: 100%; /* Make the image responsive */
+    max-width: 400px; /* Set a max-width to avoid too large images */
+    margin-bottom: 20px; /* Space between the image and text content */
+  }
+
+  .text-content {
+    max-width: 100%; /* Allow the text content to use the full width */
+    padding: 0 20px; /* Add some padding to the sides */
+  }
+}
+
+
+header {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+footer {
+  flex-shrink: 0; /* Prevents the footer from shrinking */
+  margin-top: 50px; /* Smaller margin */
+  padding: 20px;
+  text-align: center;
+}
+footer h2 {
+  color: #fff;
+}
+
+
+/* About Me Page Specific Styles */
+.emoji-tooltip {
+  display: inline-block;
+  margin: 0 10px;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.2rem; /* Adjust the size as needed */
+}
+
+.tooltip-text {
+  visibility: hidden;
+  max-width: 90vw; /* Limit the tooltip width to 90% of the viewport width */
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%; /* Position above the emoji */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: normal; /* Allow text to wrap */
+  font-size: 0.9rem; /* Adjust the font size if needed */
+  overflow-wrap: break-word; /* Break long words if necessary */
+}
+
+.emoji-tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.about-me {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  width: calc(50% - 40px); /* Adjust for two boxes per row */
+  box-sizing: border-box;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden; /* Hide overflow content */
+  position: relative; /* For animation */
+  animation: fadeInUp 1s ease-out; /* Default animation for all boxes */
+}
+
+
+/* Unique Background Colors */
+.box:nth-child(1) {
+  background-color: #e0f7fa; /* Light cyan */
+}
+
+.box:nth-child(2) {
+  background-color: #fce4ec; /* Light pink */
+}
+
+.box:nth-child(3) {
+  background-color: #f9fbe7; /* Light lime */
+}
+
+.box:nth-child(4) {
+  background-color: #e8f5e9; /* Light green */
+}
+
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Box Heading */
+.box h2 {
+  font-size: 1.6rem;
+  color: #333;
+  margin-top: 0;
+}
+
+/* Box Paragraph */
+.box p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .box {
+      width: calc(100% - 20px); /* Full width minus margins */
+      margin: 10px 0; /* Margin adjustments for mobile */
+  }
+  footer h2 {
+    font-size: medium;
+  }
+}
+
+@media (max-width: 480px) {
+  .box h2 {
+      font-size: 1.4rem; /* Adjust font size for smaller screens */
+  }
+
+  .box p {
+      font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+}
+
+
+
+form {
+  margin-top: 50px;
+}
+
+.feedback-input {
+  color: #32CD32;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid #3586ff;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.feedback-input:focus {
+  border: 2px solid #3586ff;
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+[type="submit"] {
+  width: 100%;
+  background: #3586ff;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+
+[type="submit"]:hover {
+  background: #3586ff;
+}
+/* Scroll-Up Animation */
+@keyframes scrollUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* General Services Styles */
+.my-services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center all items horizontally */
+  margin-bottom: 40px;
+  gap: 10px;
+  position: relative; /* Ensure positioning is relative for pseudo-elements */
+}
+
+/* Service Box Styling */
+.service {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 48%;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative; /* Relative positioning for pseudo-elements */
+  overflow: hidden; /* Hide overflow for pseudo-elements */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Start from below */
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+/* Add class to trigger animation */
+.service.visible {
+  animation: scrollUp 0.6s forwards;
+}
+
+/* Zig-Zag Pattern Background */
+.service::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M0 0 L100 0 L50 50 L100 100 L0 100 Z" fill="%23e0e0e0" /></svg>');
+  background-size: 200% 200%;
+  opacity: 0.2;
+  animation: animateZigZag 10s linear infinite;
+}
+
+/* Animation for Zig-Zag Pattern */
+@keyframes animateZigZag {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Style for the first service */
+.service:nth-child(1) {
+  background-color: #e3f2fd;
+  border-color: #90caf9;
+}
+
+/* Style for the second service */
+.service:nth-child(2) {
+  background-color: #f3e5f5;
+  border-color: #ce93d8;
+}
+
+/* Style for the third service */
+.service:nth-child(3) {
+  background-color: #e8f5e9;
+  border-color: #a5d6a7;
+}
+
+/* Style for the fourth service */
+.service:nth-child(4) {
+  background-color: #fff3e0;
+  border-color: #ffcc80;
+}
+
+/* Style for the fifth service */
+.service:nth-child(5) {
+  background-color: #efebe9;
+  border-color: #bcaaa4;
+}
+
+/* Heading and Paragraph Styling */
+.service h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.service p {
+  font-size: 1rem;
+  color: #666;
+}
+
+
+/* Process Section Styles */
+.process {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.process h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.process p {
+  color: grey;
+  font-family: 'Roboto', sans-serif; /* Main font for readability */
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+.process h3 {
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.process-box {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  box-sizing: border-box;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Start from below */
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+/* Add class to trigger animation */
+.process-box.visible {
+  animation: scrollUp 0.6s forwards;
+}
+
+/* Step Styles */
+.step {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  border-radius: 5px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-10px);
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+.step h3 {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.step p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Color effects for the Process Box */
+.process-box::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(53, 134, 255, 0.1);
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+
+.process-box::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 193, 7, 0.1);
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+
+.process-box:hover::before {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(53, 134, 255, 0.2);
+}
+
+.process-box:hover::after {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 193, 7, 0.2);
+}
+
+
+
+.cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.cta a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.cta a:hover {
+  text-decoration: underline;
+}
+.button {
+  background-color: #3586ff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .my-services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    width: 90%;
+  }
+}
+
+.portfolio-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5em;
+  color: #0066cc; /* Dark blue */
+}
+
+.project-highlight {
+  background-color: #f9f9f9; /* Light grey */
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+body.dark-mode .project-highlight{
+  background-color: #040d75;
+}
+
+body.dark-mode .project-highlight h3{
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.project-thumbnail {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-highlight h3 {
+  font-size: 1.8em;
+  color: #004d99; /* Slightly darker blue */
+  margin-top: 15px;
+}
+
+.project-highlight p {
+  font-size: 1.2em;
+  color: #333;
+  margin-top: 10px;
+}
+
+blockquote {
+  font-style: italic;
+  color: #000000; /* Darker text for better contrast */
+  margin: 30px 0;
+  padding: 15px 20px; /* Increased padding */
+  border-left: 8px solid #0044aa; /* Thicker and darker blue border */
+  background-color: #e0ebf7; /* Brighter light blue */
+  font-size: 1.2em; /* Slightly larger font */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+a.btn {
+  display: inline-block;
+  margin: 20px 10px;
+  padding: 15px 30px;
+  background-color: #0066cc; /* Dark blue */
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+a.btn:hover {
+  background-color: #004d99; /* Darker blue */
+  transform: scale(1.05);
+}
+
+a.btn:active {
+  transform: scale(1);
+}
+
+.project-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.gallery-image {
+  max-width: 30%;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
