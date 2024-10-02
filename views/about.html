@@ -1,5 +1,56 @@
-<%- include("partials/header.ejs") %>
-<main class="container about">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://res.cloudinary.com/dv4ejn3qv/image/upload/v1727435294/favicon_pg5eif.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+  <link rel="stylesheet" href="/styles/layout.css">
+  <link rel="stylesheet" href="/styles/content.css">
+  <title>My Portfolio</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-custom navbar-mainbg <%= activePage === 'home' ? 'home-navbar' : '' %>">
+      <a class="navbar-brand navbar-logo" href="/">
+        <img src="https://res.cloudinary.com/dv4ejn3qv/image/upload/v1727435274/web-logo_hl0q7q.svg" alt="Logo" class="navbar-logo-img">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <div class="hori-selector">
+            <div class="left"></div>
+          </div>
+          <li class="nav-item" data-page="home">
+            <a class="nav-link" href="/"><i class="fas fa-home"></i>Home</a>
+          </li>
+          <li class="nav-item" data-page="about">
+            <a class="nav-link" href="/about"><i class="fas fa-info-circle"></i>About</a>
+          </li>
+          <li class="nav-item" data-page="contact">
+            <a class="nav-link" href="/contact"><i class="fas fa-envelope"></i>Contact</a>
+          </li>
+          <li class="nav-item" data-page="services">
+            <a class="nav-link" href="/services"><i class="fas fa-concierge-bell"></i>Services</a>
+          </li>
+          <!-- Theme Toggle Button -->
+          <li class="nav-item">
+            <button id="theme-toggle" class="btn">
+              <i id="theme-icon" class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+      
+    </nav>
+  </header>
+  
+  <main class="container about">
 
 <h1>About Me</h1>
 
@@ -138,4 +189,25 @@
   
 
 
-<%- include("partials/footer.ejs") %>
+  </main>
+  <footer>
+    <h2>Connect With Me :)</h2>
+    
+    <ul class="social_icon">
+      <li><a href="https://wa.me/2349035801863"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+      <li><a href="https://twitter.com/messages/compose?recipient_id=EvulineM"><ion-icon name="logo-twitter"></ion-icon></a></li>
+      <li><a href="https://www.linkedin.com/in/evuline-michael-8b912b301"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+      <li><a href="https://instagram.com/idk_whomichaelis"><ion-icon name="logo-instagram"></ion-icon></a></li>
+    </ul>
+    <p class="copyright"> Made with 💚 by Michael.</p>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="/js/theme-toggle.js"></script>
+  </body>
+  
+  </html>
+  

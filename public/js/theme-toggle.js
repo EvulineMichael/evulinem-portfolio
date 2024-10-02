@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => { 
   const toggleButton = document.getElementById('theme-toggle');
   const themeIcon = document.getElementById('theme-icon');
   const body = document.body;
@@ -28,8 +28,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Add click event listener to the button
   toggleButton.addEventListener('click', switchTheme);
+
+  // Set active state for nav items
+  const navItems = document.querySelectorAll('.nav-item');
+  const currentPage = window.location.pathname.split('/').pop() || 'home'; // Get the current page
+
+  navItems.forEach(item => {
+    const page = item.getAttribute('data-page'); // Get the data-page attribute
+    if (page === currentPage) {
+      item.classList.add('active'); // Add active class
+    }
+
+    item.addEventListener('click', () => {
+      document.querySelector('.nav-item.active')?.classList.remove('active');
+      item.classList.add('active');
+    });
+  });
 });
 
+// Scroll arrow functionality
 document.addEventListener('DOMContentLoaded', function () {
   const arrow = document.querySelector('.scroll-arrow');
   const footer = document.querySelector('footer');
@@ -50,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// Service visibility on scroll
 document.addEventListener('DOMContentLoaded', function() {
   const services = document.querySelectorAll('.service');
 
@@ -70,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
   handleScroll(); // Initial check
 });
 
-// JavaScript for Scroll Animation
+// Process box visibility on scroll
 document.addEventListener('DOMContentLoaded', function () {
   const processBox = document.querySelector('.process-box');
 
@@ -91,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
   checkVisibility();
 });
 
-
+// Smooth scroll to sections
 document.querySelector('.scroll-arrow a').addEventListener('click', function(e) {
   e.preventDefault();
   document.querySelector(this.getAttribute('href')).scrollIntoView({
@@ -99,7 +117,7 @@ document.querySelector('.scroll-arrow a').addEventListener('click', function(e) 
   });
 });
 
-// Wait until DOM is fully loaded
+// Intersection observer for intro statement
 document.addEventListener('DOMContentLoaded', function () {
     const introStatement = document.querySelector('.intro-statement');
     const introContent = document.querySelector('.intro-content');
@@ -121,11 +139,3 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(introStatement);
     observer.observe(introContent);
 });
-
-document.querySelectorAll('.nav-item').forEach(item => {
-  item.addEventListener('click', () => {
-    document.querySelector('.nav-item.active')?.classList.remove('active');
-    item.classList.add('active');
-  });
-});
-

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://res.cloudinary.com/dv4ejn3qv/image/upload/v1727435294/favicon_pg5eif.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+  <link rel="stylesheet" href="/styles/layout.css">
+  <link rel="stylesheet" href="/styles/content.css">
+  <title>My Portfolio</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-custom navbar-mainbg <%= activePage === 'home' ? 'home-navbar' : '' %>">
+      <a class="navbar-brand navbar-logo" href="/">
+        <img src="https://res.cloudinary.com/dv4ejn3qv/image/upload/v1727435274/web-logo_hl0q7q.svg" alt="Logo" class="navbar-logo-img">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <div class="hori-selector">
+            <div class="left"></div>
+          </div>
+          <li class="nav-item" data-page="home">
+            <a class="nav-link" href="/"><i class="fas fa-home"></i>Home</a>
+          </li>
+          <li class="nav-item" data-page="about">
+            <a class="nav-link" href="/about"><i class="fas fa-info-circle"></i>About</a>
+          </li>
+          <li class="nav-item" data-page="contact">
+            <a class="nav-link" href="/contact"><i class="fas fa-envelope"></i>Contact</a>
+          </li>
+          <li class="nav-item" data-page="services">
+            <a class="nav-link" href="/services"><i class="fas fa-concierge-bell"></i>Services</a>
+          </li>
+          <!-- Theme Toggle Button -->
+          <li class="nav-item">
+            <button id="theme-toggle" class="btn">
+              <i id="theme-icon" class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+      
+    </nav>
+  </header>
+
+<main class="container services">
+
+<header>
+    <h1>My Services</h1>
+    <p>Discover our range of high-quality web development and design services tailored to your needs.</p>
+  </header>
+
+  <section class="my-services">
+    <div class="service">
+      <h2>Web Development</h2>
+      <p>Build responsive and efficient websites using the latest technologies for optimal performance and user experience.</p>
+    </div>
+
+    <div class="service">
+      <h2>Web Design</h2>
+      <p>Create visually stunning and intuitive interfaces that captivate your audience and enhance user engagement.</p>
+    </div>
+
+    <div class="service">
+      <h2>E-commerce Solutions</h2>
+      <p>Develop secure and scalable e-commerce platforms that provide seamless shopping experiences and drive sales.</p>
+    </div>
+
+    <div class="service">
+      <h2>SEO Optimization</h2>
+      <p>Improve your website's visibility and search rankings with our comprehensive SEO services tailored to your industry.</p>
+    </div>
+
+    <div class="service">
+      <h2>Content Management Systems</h2>
+      <p>Easily manage your website content with custom CMS solutions designed to fit your specific requirements.</p>
+    </div>
+  </section>
+
+  <section class="process">
+    <h2>The Process</h2>
+    <div class="process-box">
+      <div class="step">
+        <h3>1. Consultation</h3>
+        <p>We begin by understanding your needs and goals to create a tailored plan for your project.</p>
+      </div>
+  
+      <div class="step">
+        <h3>2. Planning</h3>
+        <p>Our team develops a strategic plan, setting timelines, and resources to ensure successful project execution.</p>
+      </div>
+  
+      <div class="step">
+        <h3>3. Design & Development</h3>
+        <p>We design and develop your project with a focus on quality, efficiency, and user experience.</p>
+      </div>
+  
+      <div class="step">
+        <h3>4. Testing & Launch</h3>
+        <p>Before launch, we rigorously test the project to ensure it meets our high standards and your expectations.</p>
+      </div>
+  
+      <div class="step">
+        <h3>5. Support & Maintenance</h3>
+        <p>We provide ongoing support and maintenance to keep your project running smoothly after launch.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="cta">
+    <p>Ready to take your online presence to the next level? <a href="/contact">Contact me today</a> to discuss your project and discover how we can help you achieve your goals!</p>
+  </section>
+
+</main>
+<footer>
+  <h2>Connect With Me :)</h2>
+  
+  <ul class="social_icon">
+    <li><a href="https://wa.me/2349035801863"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+    <li><a href="https://twitter.com/messages/compose?recipient_id=EvulineM"><ion-icon name="logo-twitter"></ion-icon></a></li>
+    <li><a href="https://www.linkedin.com/in/evuline-michael-8b912b301"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+    <li><a href="https://instagram.com/idk_whomichaelis"><ion-icon name="logo-instagram"></ion-icon></a></li>
+  </ul>
+  <p class="copyright"> Made with 💚 by Michael.</p>
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="/js/theme-toggle.js"></script>
+</body>
+
+</html>
