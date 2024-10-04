@@ -14,8 +14,8 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-custom navbar-mainbg <%= activePage === 'home' ? 'home-navbar' : '' %>">
-      <a class="navbar-brand navbar-logo" href="/">
+    <nav class="navbar navbar-expand-custom navbar-mainbg">
+      <a class="navbar-brand navbar-logo" href="./index.html">
         <img src="https://res.cloudinary.com/dv4ejn3qv/image/upload/v1727435274/web-logo_hl0q7q.svg" alt="Logo" class="navbar-logo-img">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,18 +26,19 @@
           <div class="hori-selector">
             <div class="left"></div>
           </div>
-          <li class="nav-item" data-page="home">
-            <a class="nav-link" href="/"><i class="fas fa-home"></i>Home</a>
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html"><i class="fas fa-home"></i>Home</a>
           </li>
-          <li class="nav-item" data-page="about">
-            <a class="nav-link" href="/about"><i class="fas fa-info-circle"></i>About</a>
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html"><i class="fas fa-info-circle"></i>About</a>
           </li>
-          <li class="nav-item" data-page="contact">
-            <a class="nav-link" href="/contact"><i class="fas fa-envelope"></i>Contact</a>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html"><i class="fas fa-envelope"></i>Contact</a>
           </li>
-          <li class="nav-item" data-page="services">
-            <a class="nav-link" href="/services"><i class="fas fa-concierge-bell"></i>Services</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="./services.html"><i class="fas fa-concierge-bell"></i>Services</a>
           </li>
+          
           <!-- Theme Toggle Button -->
           <li class="nav-item">
             <button id="theme-toggle" class="btn">
@@ -46,9 +47,9 @@
           </li>
         </ul>
       </div>
-      
     </nav>
   </header>
+  
 
 <main class="container services">
 
@@ -135,7 +136,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="/js/theme-toggle.js"></script>
+<script src="./js/theme-toggle.js"></script>
 </body>
 
 </html>
