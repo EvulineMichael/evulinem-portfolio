@@ -84,7 +84,7 @@ i {
 
 /* Adjust the size of the image inside the navbar */
 .navbar-logo-img {
-  width: 120px; /* Keep the image size */
+  width: 100px; /* Keep the image size */
   transition: transform 0.7s ease-in-out;
 }
 
