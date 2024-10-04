@@ -9,23 +9,23 @@ const port = 3000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename); // Use dirname to get the directory name
 
-app.use(express.static(path.join(__dirname, "public"))); // Serve static files from the "public" directory
+app.use(express.static("public")); // Serve static files from the "public" directory
 
-// Define routes for the HTML files
+// Define the view engine to HTML files
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html")); // Serve index.html
+  res.sendFile(path.join(__dirname, "views", "index.html")); // Serve index.html
 });
 
 app.get("/about", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "about.html")); // Serve about.html
+  res.sendFile(path.join(__dirname, "views", "about.html")); // Serve about.html
 });
 
 app.get("/contact", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "contact.html")); // Serve contact.html
+  res.sendFile(path.join(__dirname, "views", "contact.html")); // Serve contact.html
 });
 
 app.get("/services", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "services.html")); // Serve services.html
+  res.sendFile(path.join(__dirname, "views", "services.html")); // Serve services.html
 });
 
 // Start the server
