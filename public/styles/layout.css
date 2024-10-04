@@ -87,6 +87,11 @@ i {
   width: 100px; /* Keep the image size */
   transition: transform 0.7s ease-in-out;
 }
+@media (max-width: 992px) {
+  .navbar-logo-img {
+    width: 90px; /* Keep the image size */
+  }
+}
 
 /* Rotate animation on hover */
 .navbar-logo-img:hover {
